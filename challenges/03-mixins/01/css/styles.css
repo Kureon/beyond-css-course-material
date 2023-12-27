@@ -1,0 +1,88 @@
+body {
+  font-family: system-ui;
+  margin: 0;
+}
+
+.section-one,
+.section-two,
+.section-three {
+  text-align: center;
+  padding: 10vh 0;
+}
+
+.title::after {
+  content: "";
+  display: block;
+  width: 5rem;
+  height: 1px;
+  margin: 2rem auto;
+  background-color: black;
+}
+
+.section-one {
+  background: linear-gradient(-45deg, black, yellow);
+  color: white;
+}
+
+.section-two {
+  background: linear-gradient(90deg, rgb(0, 0, 103), rgb(52, 0, 91));
+  color: white;
+}
+
+.section-three {
+  background: linear-gradient(45deg, black, orange);
+}
+
+.button-one {
+  display: inline-block;
+  padding: 0.5em 1.5em;
+  color: white;
+  background-color: black;
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+}
+.button-one:hover, .button-one:focus {
+  color: black;
+  background-color: white;
+}
+
+.button-two {
+  display: inline-block;
+  padding: 1em 3em;
+  color: yellow;
+  background-color: #3b0f0f;
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+}
+.button-two:hover, .button-two:focus {
+  color: #3b0f0f;
+  background-color: yellow;
+}
+
+.badge-one {
+  display: inline-block;
+  padding: 0.5 1.5;
+  color: black;
+  background-color: white;
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+}
+.badge-one:hover, .badge-one:focus {
+  color: black;
+  background-color: white;
+}
+
+.badge-two {
+  display: inline-block;
+  padding: 0.25em 0.75em;
+  color: #006eff;
+  background-color: #0f0f1d;
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+}
+.badge-two:hover, .badge-two:focus {
+  color: #006eff;
+  background-color: #0f0f1d;
+}
+
+/*# sourceMappingURL=styles.css.map */

@@ -1,3 +1,33 @@
+@mixin gradient($deg: -45deg, $clr1: black, $clr2: yellow) {
+  background: linear-gradient($deg, $clr1, $clr2);
+}
+
+@mixin pseudo-element($width: 5rem, $height: 1px, $margin: 2rem, $background-clr: black) {
+  &::after {
+    content: '';
+    display: block;
+    width: $width;
+    height: $height;
+    margin: $margin auto;
+    background-color: $background-clr;
+  }
+}
+
+@mixin ui-element($size: 1em, $color: white, $bg-color: black, $hover-color: black, $hover-bg-color: white) {
+  display: inline-block;
+  padding: $size calc($size * 3);
+  color: $color;
+  background-color: $bg-color;
+  text-decoration: none;
+  transition: all .3s ease-in-out;
+
+  &:hover,
+  &:focus {
+    color: $hover-color;
+    background-color: $hover-bg-color;
+  }
+}
+
 body {
   font-family: system-ui;
   margin: 0;
@@ -8,4 +38,38 @@ body {
 .section-three {
   text-align: center;
   padding: 10vh 0;
+}
+
+.title {
+  @include pseudo-element;
+}
+
+.section-one {
+  @include gradient;
+  color: white;
+}
+
+.section-two {
+  @include gradient(90deg, rgb(0, 0, 103), rgb(52, 0, 91));
+  color: white;
+}
+
+.section-three {
+  @include gradient($deg:45deg, $clr2: orange);
+}
+
+.button-one {
+  @include ui-element(0.5em, white, black, black, white);
+}
+
+.button-two {
+  @include ui-element(1em, yellow, #3b0f0f, #3b0f0f, yellow);
+}
+
+.badge-one {
+  @include ui-element(0.5, black, white, black, white);
+}
+
+.badge-two {
+  @include ui-element(0.25em, #006eff, #0f0f1d, #006eff, #0f0f1d);
 }
